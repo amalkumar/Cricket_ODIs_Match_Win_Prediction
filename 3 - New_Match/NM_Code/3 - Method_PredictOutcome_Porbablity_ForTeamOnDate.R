@@ -11,7 +11,7 @@ PredictOutcome_Probability_ForTeamOnDate <- function(newMatchDir="D:/Study_Mater
   
   if(!file.exists(newMatchFileWithPath)){
     
-    print("File Doesnt exists")
+    print("File Doesnt exists--1")
     stop()
     
   } else{
@@ -58,10 +58,10 @@ PredictOutcome_Probability_ForTeamOnDate <- function(newMatchDir="D:/Study_Mater
         inputModelFileNameWithPath <- paste(teamNameDirectoryonDateModel,model_name,sep = "")
         
         
-        
+        #print(inputModelFileNameWithPath)
         if(!file.exists(inputFileNameWithPath) | !file.exists(inputModelFileNameWithPath)){
           
-          print("File Doesnt exists")
+          print("File Doesnt exists--2")
           stop()
           
         } else{

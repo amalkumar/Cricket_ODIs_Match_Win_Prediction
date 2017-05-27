@@ -3,13 +3,13 @@ options(warn=-1)
 
 library(dplyr)
 
-source("D:/Study_Material/DataAnalytics/GIT/ODIs/Cricket_ODIs_Match_Win_Prediction/2 - Model_Creation/MC_Code/Method_GetTeamWinRatioOnDate.R")
-source("D:/Study_Material/DataAnalytics/GIT/ODIs/Cricket_ODIs_Match_Win_Prediction/2 - Model_Creation/MC_Code/Method_GetTeamWinRatioOnDate_vs_Opponent.R")
-source("D:/Study_Material/DataAnalytics/GIT/ODIs/Cricket_ODIs_Match_Win_Prediction/2 - Model_Creation/MC_Code/Method_GetTeamWinRatioOnDateAtVenueCountry.R")
-source("D:/Study_Material/DataAnalytics/GIT/ODIs/Cricket_ODIs_Match_Win_Prediction/2 - Model_Creation/MC_Code/Method_GetTeamBattingPerfScoreOnDate.R")
-source("D:/Study_Material/DataAnalytics/GIT/ODIs/Cricket_ODIs_Match_Win_Prediction/2 - Model_Creation/MC_Code/Method_GetTeamBattingPerfScoreOnDate_vs_Opponent.R")
-source("D:/Study_Material/DataAnalytics/GIT/ODIs/Cricket_ODIs_Match_Win_Prediction/2 - Model_Creation/MC_Code/Method_GetTeamBowlingPerfScoreOnDate.R")
-source("D:/Study_Material/DataAnalytics/GIT/ODIs/Cricket_ODIs_Match_Win_Prediction/2 - Model_Creation/MC_Code/Method_GetTeamBowlingPerfScoreOnDate_vs_Opponent.R")
+source("Method_GetTeamWinRatioOnDate.R")
+source("Method_GetTeamWinRatioOnDate_vs_Opponent.R")
+source("Method_GetTeamWinRatioOnDateAtVenueCountry.R")
+source("Method_GetTeamBattingPerfScoreOnDate.R")
+source("Method_GetTeamBattingPerfScoreOnDate_vs_Opponent.R")
+source("Method_GetTeamBowlingPerfScoreOnDate.R")
+source("Method_GetTeamBowlingPerfScoreOnDate_vs_Opponent.R")
 
 
 CreateAggregatedDataForTeamOnDate <- function(newMatchDir="D:/Study_Material/DataAnalytics/GIT/ODIs/Output_Data/3 - New_Match/",newMatchFile="New_Match.csv"){
@@ -55,9 +55,9 @@ CreateAggregatedDataForTeamOnDate <- function(newMatchDir="D:/Study_Material/Dat
         
         
         df$TeamName_Team_Winning_Ratio_All[i] <- ((GetTeamWinningRecordsOnDate(teamName,Match_Date))$Winning_Ratio)
-        ##print("---------------------1")
+        print("---------------------1")
         df$TeamName_Team_Winning_Ratio_Last5Matches[i] <- ((GetTeamWinningRecordsOnDate_Last5Matches(teamName,Match_Date))$Winning_Ratio)
-        ##print("---------------------2")
+        print("---------------------2")
         df$TeamName_Batting_Performance_all[i] <- ((TeamBattingPerformanceOnDate(teamName,Match_Date))$Batting_Performance)
         ##print("---------------------3")
         df$TeamName_Batting_Performance_Last5Matches[i] <- ((TeamBattingPerformanceOnDate_Last5Matches(teamName,Match_Date))$Batting_Performance)

@@ -1,4 +1,4 @@
-setwd("D:/Study_Material/DataAnalytics/GIT/ODIs/Cricket_ODIs_Match_Win_Prediction/2 - Model_Creation/MC_Code/")
+setwd("D:/Study_Material/DataAnalytics/GIT/ODIs/Cricket_ODIs_Match_Win_Prediction/3 - New_Match/NM_Code/")
 
 options(warn=-1)
 
@@ -12,7 +12,7 @@ TeamBattingRecordsOnDate <- function(teamName,onDate){
   #####print(teamName)
   #####print("stage1")
   
-  inputFileName <- "D:/Study_Material/DataAnalytics/GIT/ODIs/Output_Data/1 - Data_Creation/DC_Output/DC-2-batting_record.csv"
+  inputFileName <- "D:/Study_Material/DataAnalytics/GIT/ODIs/Output_Data/3 - New_Match/DC-2-batting_record.csv"
   
   df <- read.csv(file = inputFileName,as.is=TRUE,header = TRUE)
   df$Match_Date <- as.Date(df$Match_Date)
@@ -120,8 +120,7 @@ TeamBattingRecordsOnDate_Last5Matches <- function(teamName,onDate){
   
   ##print("Stage1")
   
-  
-  inputFileName <- "D:/Study_Material/DataAnalytics/GIT/ODIs/Output_Data/1 - Data_Creation/DC_Output/DC-2-batting_record.csv"
+  inputFileName <- "D:/Study_Material/DataAnalytics/GIT/ODIs/Output_Data/3 - New_Match/DC-2-batting_record.csv"
   
   df <- read.csv(file = inputFileName,as.is=TRUE,header = TRUE)
   df$Match_Date <- as.Date(df$Match_Date)
